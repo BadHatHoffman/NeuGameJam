@@ -1,33 +1,11 @@
 ﻿using UnityEngine;
 
-public class MainCamera : MonoBehaviour
-{
-    public Material normalMat;
-    public bool isBWMode = false;
-    public Shader bwShader;
-    Material bwMat;
+public class MainCamera : MonoBehaviour {
 
     Portal[] portals;
 
     void Awake () {
         portals = FindObjectsOfType<Portal> ();
-    }
-
-    void Start()
-    {
-        bwMat = new Material(bwShader);
-    }
-
-    private void OnRenderImage(RenderTexture src, RenderTexture dst)
-    {
-        if(isBWMode)
-        {
-            Graphics.Blit(src, dst, bwMat);
-        }
-        else
-        {
-            Graphics.Blit(src, dst);
-        }
     }
 
     void OnPreCull () {

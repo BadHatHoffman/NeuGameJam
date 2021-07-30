@@ -122,8 +122,6 @@ public class FPSController : PortalTraveller {
         transform.eulerAngles = Vector3.up * smoothYaw;
         velocity = toPortal.TransformVector (fromPortal.InverseTransformVector (velocity));
         Physics.SyncTransforms ();
-
-        GetComponentInChildren<MainCamera>().isBWMode = !GetComponentInChildren<MainCamera>().isBWMode;
     }
 
 }
