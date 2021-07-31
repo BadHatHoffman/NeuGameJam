@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &200956288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4205714879578628501, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+  m_PrefabInstance: {fileID: 1586040869}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b9885b89b6d4fbe92f77801ecc3671, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &572214906
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,11 +230,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &909765382 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7665427741182837590, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-  m_PrefabInstance: {fileID: 2120340244}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1045125293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -231,6 +237,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1546377045901786768, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 58.99017
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546377045901786768, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 101.52468
+      objectReference: {fileID: 0}
+    - target: {fileID: 1546377045901786768, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.684097
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205714879578628501, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
+      propertyPath: linkedPortal
+      value: 
+      objectReference: {fileID: 200956288}
     - target: {fileID: 4205714879578628506, guid: bfcb13c8b95e6411d8174fbe153e4bb4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -501,49 +523,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: yaw
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: gravity
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: runSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: walkSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: lockCursor
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: graphicsObject
-      value: 
-      objectReference: {fileID: 909765382}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: smoothMoveTime
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: mouseSensitivity
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665427741718626423, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: bwShader
-      value: 
-      objectReference: {fileID: 4800000, guid: e7555a35dc42c9349b8b602a085991a8, type: 3}
-    - target: {fileID: 7665427741718626423, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: otherCam
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7665427741718626423, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
-      propertyPath: normalMat
-      value: 
-      objectReference: {fileID: 2100000, guid: 8964446e29c5dc943851e29bfef8504a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
