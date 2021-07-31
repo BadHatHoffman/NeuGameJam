@@ -4833,7 +4833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
-  speed: 500
+  speed: 250
   rb: {fileID: 0}
 --- !u!54 &3885555844067920692
 Rigidbody:
