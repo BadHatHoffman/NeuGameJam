@@ -12,6 +12,8 @@ public class UIManagement : MonoBehaviour
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
+        AudioManager.Instance.Play("MenuSong");
+
     }
 
     //scene management
