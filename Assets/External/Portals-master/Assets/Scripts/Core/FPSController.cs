@@ -38,7 +38,7 @@ public class FPSController : PortalTraveller
     public bool disabled;
     public bool isTiger = false;
     public Animator tigerAnim, camAnim, joshAnim;
-    public GameObject transformParticle;
+    public GameObject transformParticle, castParticle, castHand;
 
     void Start () {
         cam = Camera.main;
@@ -107,14 +107,14 @@ public class FPSController : PortalTraveller
         transform.eulerAngles = Vector3.up * smoothYaw;
         cam.transform.localEulerAngles = Vector3.right * smoothPitch;
 
-        //Tiger data
+        //Tiger anims
         if(isTiger)
         {
             TigerChecks();
         }
-        else
+        else //Josh Anims
         {
-
+            JoshChecks();
         }
 
     }
@@ -122,6 +122,17 @@ public class FPSController : PortalTraveller
     private void TigerChecks()
     {
         tigerAnim.SetFloat("Speed", controller.velocity.magnitude);
+    }
+
+    private void JoshChecks()
+    {
+        joshAnim.SetFloat("Speed", controller.velocity.magnitude);
+        if(Input.GetButtonDown("Fire1"))
+        {
+            joshAnim.SetTrigger("Cast");
+            Spell spell = Instantiate(castParticle, castHand.transform.position, Quaternion.identity, castHand.transform).GetComponent<Spell>();
+            GetComponentInChildren<Cast>().spellObj = spell;
+        }
     }
 
     public override void Teleport (Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot) {

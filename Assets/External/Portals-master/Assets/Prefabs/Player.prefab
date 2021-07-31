@@ -63,8 +63,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   graphicsObject: {fileID: 4400102972485966373}
   secondModel: {fileID: 621111156463197594}
-  camTransformOrig: {x: 0, y: 0.1, z: 0.093}
-  camTransformNew: {x: 0, y: -0.51, z: 0.569}
+  camTransformOrig: {x: 0, y: 1.095, z: 0.093}
+  camTransformNew: {x: 0, y: 0.524, z: 0.598}
   walkSpeed: 4
   runSpeed: 8
   smoothMoveTime: 0.15
@@ -82,6 +82,8 @@ MonoBehaviour:
   camAnim: {fileID: 1441947889}
   joshAnim: {fileID: 6970360763855084261}
   transformParticle: {fileID: 4519621168524505272, guid: 9736e429144514746b02ea9c2aba6882, type: 3}
+  castParticle: {fileID: 2315430422141834879, guid: 9fc30f7ab121c3349a54d6d7c021ea2c, type: 3}
+  castHand: {fileID: 1476765917388049013}
 --- !u!143 &1535381019623673733
 CharacterController:
   m_ObjectHideFlags: 0
@@ -93,13 +95,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.22
+  m_Radius: 0.34
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.56, z: 0}
 --- !u!1 &1535381020191089684
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +130,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535381020191089684}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.1, z: 0.093}
+  m_LocalPosition: {x: 0, y: 1.095, z: 0.093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1535381019623673786}
@@ -200,7 +202,7 @@ MonoBehaviour:
   normalMat: {fileID: 2100000, guid: 8964446e29c5dc943851e29bfef8504a, type: 2}
   isBWMode: 0
   bwShader: {fileID: 4800000, guid: e7555a35dc42c9349b8b602a085991a8, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 5892241682875843252}
   camTransitionSpeed: 1
   camPos: {x: 0, y: 0, z: 0}
 --- !u!95 &1441947889
@@ -211,7 +213,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535381020191089684}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cb2a5b2db1555874fb6fba450a213f15, type: 2}
   m_CullingMode: 0
@@ -259,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400036, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400036, guid: 0faaca137bc5a794098e6b71f8bb22f6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -343,7 +345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 101de52489380ef44a843340b7b85852, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 101de52489380ef44a843340b7b85852, type: 3}
       propertyPath: m_LocalPosition.z
@@ -400,5 +402,10 @@ Transform:
 --- !u!95 &6970360763855084261 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 101de52489380ef44a843340b7b85852, type: 3}
+  m_PrefabInstance: {fileID: 3589693838197237620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1476765917388049013 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2715566404302941441, guid: 101de52489380ef44a843340b7b85852, type: 3}
   m_PrefabInstance: {fileID: 3589693838197237620}
   m_PrefabAsset: {fileID: 0}
