@@ -37,7 +37,7 @@ public class FPSController : PortalTraveller
     float lastGroundedTime;
     public bool disabled;
     public bool isTiger = false;
-    public Animator anim, camAnim;
+    public Animator tigerAnim, camAnim, joshAnim;
     public GameObject transformParticle;
 
     void Start () {
@@ -112,12 +112,16 @@ public class FPSController : PortalTraveller
         {
             TigerChecks();
         }
+        else
+        {
+
+        }
 
     }
 
     private void TigerChecks()
     {
-        anim.SetFloat("Speed", controller.velocity.magnitude);
+        tigerAnim.SetFloat("Speed", controller.velocity.magnitude);
     }
 
     public override void Teleport (Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot) {
@@ -139,7 +143,7 @@ public class FPSController : PortalTraveller
 
         GetComponentInChildren<MainCamera>().isBWMode = bw;
 
-        Destroy(Instantiate(transformParticle, transform.position, transformParticle.transform.rotation), 9);
+        Destroy(Instantiate(transformParticle, transform.position, transformParticle.transform.rotation), 5);
         if(bw)
         {
             secondModel.SetActive(true);

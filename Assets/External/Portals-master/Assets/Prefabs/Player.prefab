@@ -78,8 +78,9 @@ MonoBehaviour:
   pitch: 0
   disabled: 0
   isTiger: 0
-  anim: {fileID: 621111156472557118}
+  tigerAnim: {fileID: 621111156472557118}
   camAnim: {fileID: 1441947889}
+  joshAnim: {fileID: 6970360763855084261}
   transformParticle: {fileID: 4519621168524505272, guid: 9736e429144514746b02ea9c2aba6882, type: 3}
 --- !u!143 &1535381019623673733
 CharacterController:
@@ -380,6 +381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Josh
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 101de52489380ef44a843340b7b85852, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: da7b4140a0e2f3a46bd01c8409f70fb2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101de52489380ef44a843340b7b85852, type: 3}
 --- !u!1 &4400102972485966373 stripped
@@ -390,5 +395,10 @@ GameObject:
 --- !u!4 &3916899104497254559 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 101de52489380ef44a843340b7b85852, type: 3}
+  m_PrefabInstance: {fileID: 3589693838197237620}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6970360763855084261 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 101de52489380ef44a843340b7b85852, type: 3}
   m_PrefabInstance: {fileID: 3589693838197237620}
   m_PrefabAsset: {fileID: 0}
