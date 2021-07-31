@@ -35,7 +35,10 @@ public class FPSController : PortalTraveller
 
     bool jumping;
     float lastGroundedTime;
-    bool disabled;
+    public bool disabled;
+    public bool isTiger = false;
+    public Animator anim, camAnim;
+    public GameObject transformParticle;
 
     void Start () {
         cam = Camera.main;
@@ -104,6 +107,17 @@ public class FPSController : PortalTraveller
         transform.eulerAngles = Vector3.up * smoothYaw;
         cam.transform.localEulerAngles = Vector3.right * smoothPitch;
 
+        //Tiger data
+        if(isTiger)
+        {
+            TigerChecks();
+        }
+
+    }
+
+    private void TigerChecks()
+    {
+        anim.SetFloat("Speed", controller.velocity.magnitude);
     }
 
     public override void Teleport (Transform fromPortal, Transform toPortal, Vector3 pos, Quaternion rot) {
@@ -125,18 +139,25 @@ public class FPSController : PortalTraveller
 
         GetComponentInChildren<MainCamera>().isBWMode = bw;
 
+        Destroy(Instantiate(transformParticle, transform.position, transformParticle.transform.rotation), 9);
         if(bw)
         {
             secondModel.SetActive(true);
             graphicsObject.SetActive(false);
-            cam.transform.localPosition = camTransformNew;
+            cam.GetComponent<MainCamera>().camPos = camTransformNew;
+            GetComponent<MainController>().SwapToTiger();
         }
         else
         {
             secondModel.SetActive(false);
             graphicsObject.SetActive(true);
-            cam.transform.localPosition = camTransformOrig;
+            cam.GetComponent<MainCamera>().camPos = camTransformOrig;
+            GetComponent<MainController>().SwapToHuman();
         }
+
+        disabled = true;
+        camAnim.enabled = true;
+        camAnim.SetTrigger("Transform");
     }
 
 }
