@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public FPSController fpsController;
+
+    public void SwapToHuman()
     {
-        
+        fpsController.isTiger = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SwapToTiger()
     {
-        
+        fpsController.isTiger = true;
     }
 }

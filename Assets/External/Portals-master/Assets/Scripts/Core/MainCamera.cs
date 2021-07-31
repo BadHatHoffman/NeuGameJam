@@ -9,6 +9,11 @@ public class MainCamera : MonoBehaviour
 
     Portal[] portals;
 
+    public FPSController player;
+    public float camTransitionSpeed = 1;
+    public Vector3 camPos;
+    private bool moveCam = false;
+
     void Awake () {
         portals = FindObjectsOfType<Portal> ();
     }
@@ -16,6 +21,24 @@ public class MainCamera : MonoBehaviour
     void Start()
     {
         bwMat = new Material(bwShader);
+    }
+
+    private void Update()
+    {
+        if(moveCam)
+        {
+            GetComponent<Animator>().Play("CameraTransformRotation", -1, 0);
+            GetComponent<Animator>().enabled = false;
+            transform.localPosition = Vector3.Lerp(transform.localPosition, camPos, Time.deltaTime * camTransitionSpeed);
+            transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.identity, Time.deltaTime * camTransitionSpeed);
+            if(Vector3.Distance(transform.localPosition, camPos) <= .1f)
+            {
+                transform.localPosition = camPos;
+                transform.localRotation = Quaternion.identity;
+                GetComponentInParent<FPSController>().disabled = false;
+                moveCam = false;
+            }
+        }
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dst)
@@ -45,4 +68,8 @@ public class MainCamera : MonoBehaviour
 
     }
 
+    public void MoveCamPosition()
+    {
+        moveCam = true;
+    }
 }

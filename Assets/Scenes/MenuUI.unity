@@ -183,7 +183,8 @@ MonoBehaviour:
   m_text: Portal system courtesy of Sebastian Lague
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -438,7 +439,8 @@ MonoBehaviour:
   m_text: Play Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -771,7 +773,8 @@ MonoBehaviour:
   m_text: "The Degradation of \nOur Friend, Josh"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -905,7 +908,8 @@ MonoBehaviour:
   m_text: Salem created the UI and story
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1039,7 +1043,8 @@ MonoBehaviour:
   m_text: BACK
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1482,7 +1487,8 @@ MonoBehaviour:
   m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1749,7 +1755,8 @@ MonoBehaviour:
   m_text: Chandler created the map and model animations
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2271,7 +2278,8 @@ MonoBehaviour:
   m_text: Credits
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2405,7 +2413,8 @@ MonoBehaviour:
   m_text: Hoffman set up the github repo and assisted with the backend functionality
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2540,7 +2549,8 @@ MonoBehaviour:
     the transformation technology
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2674,7 +2684,8 @@ MonoBehaviour:
   m_text: Font courtesy of the Unity asset store
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2808,7 +2819,8 @@ MonoBehaviour:
   m_text: Background image courtesy of Prometheus Entertainment
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2987,7 +2999,8 @@ MonoBehaviour:
   m_text: Exit Game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
-  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
+  m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
