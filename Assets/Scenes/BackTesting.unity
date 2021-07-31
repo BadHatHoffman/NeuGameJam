@@ -219,6 +219,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &909765382 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7665427741182837590, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+  m_PrefabInstance: {fileID: 2120340244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1045125293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -495,6 +500,38 @@ PrefabInstance:
     - target: {fileID: 1535381019623673786, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: yaw
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: gravity
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: runSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: walkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: lockCursor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: graphicsObject
+      value: 
+      objectReference: {fileID: 909765382}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: smoothMoveTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: mouseSensitivity
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7665427741718626423, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: bwShader

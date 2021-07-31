@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1535381019623673786}
-  - component: {fileID: 1535381019623673787}
+  - component: {fileID: 5892241682875843252}
   - component: {fileID: 1535381019623673733}
   m_Layer: 10
   m_Name: Player
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1535381019623673787
+--- !u!114 &5892241682875843252
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535381019623673784}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d6a5ccf8889c4d978067bb5dc639458, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f11e2844a47ad042ac88b6b249a5564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   graphicsObject: {fileID: 7665427741182837590}
@@ -56,8 +56,8 @@ MonoBehaviour:
   mouseSensitivity: 11
   pitchMinMax: {x: -40, y: 85}
   rotationSmoothTime: 0.1
-  yaw: 5.187398
-  pitch: 0.5499961
+  yaw: 0
+  pitch: 0
 --- !u!143 &1535381019623673733
 CharacterController:
   m_ObjectHideFlags: 0
@@ -172,7 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a42331d6ec5746d4960a877e58cfb58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blackAndWhite: {fileID: 4800000, guid: e7555a35dc42c9349b8b602a085991a8, type: 3}
+  normalMat: {fileID: 2100000, guid: 8964446e29c5dc943851e29bfef8504a, type: 2}
+  isBWMode: 0
+  bwShader: {fileID: 4800000, guid: e7555a35dc42c9349b8b602a085991a8, type: 3}
 --- !u!1 &7665427741182837590
 GameObject:
   m_ObjectHideFlags: 0
