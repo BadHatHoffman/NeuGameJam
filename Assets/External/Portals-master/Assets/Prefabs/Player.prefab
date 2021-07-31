@@ -64,7 +64,7 @@ MonoBehaviour:
   graphicsObject: {fileID: 4400102972485966373}
   secondModel: {fileID: 621111156463197594}
   camTransformOrig: {x: 0, y: 0.1, z: 0.093}
-  camTransformNew: {x: 0, y: 0.456, z: 0.0559}
+  camTransformNew: {x: 0, y: -0.51, z: 0.569}
   walkSpeed: 4
   runSpeed: 8
   smoothMoveTime: 0.15
