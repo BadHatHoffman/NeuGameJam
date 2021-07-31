@@ -53,6 +53,8 @@ public class FPSController : PortalTraveller
         pitch = cam.transform.localEulerAngles.x;
         smoothYaw = yaw;
         smoothPitch = pitch;
+
+        GetComponent<Health>().Death.AddListener(Die);
     }
 
     void Update () {
@@ -173,6 +175,12 @@ public class FPSController : PortalTraveller
         disabled = true;
         camAnim.enabled = true;
         camAnim.SetTrigger("Transform");
+    }
+
+    public void Die()
+    {
+        //TODO: Do something here
+        print("I am dead");
     }
 
 }

@@ -19,7 +19,7 @@ public class Spell : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            //TODO: Do damage
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
     }
 }

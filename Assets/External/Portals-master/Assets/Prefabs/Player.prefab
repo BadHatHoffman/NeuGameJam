@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5869453752843046500}
   - component: {fileID: 5892241682875843252}
   - component: {fileID: 1535381019623673733}
+  - component: {fileID: 1298169798}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -102,6 +103,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.56, z: 0}
+--- !u!114 &1298169798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535381019623673784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ddbe5e32cd47974eb4ce2f47d6f74d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 100
+  Death:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1535381020191089684
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,6 +242,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1665513035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4400102972485966373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f381ce8976d0dc14ba1c7b80cf6d467c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spellObj: {fileID: 0}
 --- !u!1001 &621111156463164254
 PrefabInstance:
   m_ObjectHideFlags: 0
