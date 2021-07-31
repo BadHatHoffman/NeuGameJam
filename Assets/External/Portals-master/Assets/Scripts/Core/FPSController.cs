@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FPSController : PortalTraveller {
+public class FPSController : PortalTraveller
+{
+    public GameObject secondModel;
+    public Vector3 camTransformOrig, camTransformNew;
 
     public float walkSpeed = 3;
     public float runSpeed = 6;
@@ -123,7 +126,27 @@ public class FPSController : PortalTraveller {
         velocity = toPortal.TransformVector (fromPortal.InverseTransformVector (velocity));
         Physics.SyncTransforms ();
 
-        GetComponentInChildren<MainCamera>().isBWMode = !GetComponentInChildren<MainCamera>().isBWMode;
+        ChangeMode();
+    }
+
+    public void ChangeMode()
+    {
+        bool bw = !GetComponentInChildren<MainCamera>().isBWMode;
+
+        GetComponentInChildren<MainCamera>().isBWMode = bw;
+
+        if(bw)
+        {
+            secondModel.SetActive(true);
+            graphicsObject.SetActive(false);
+            cam.transform.localPosition = camTransformNew;
+        }
+        else
+        {
+            secondModel.SetActive(false);
+            graphicsObject.SetActive(true);
+            cam.transform.localPosition = camTransformOrig;
+        }
     }
 
 }
