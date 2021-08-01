@@ -12,6 +12,7 @@ public class BaseEnemyController : MonoBehaviour
     public Animator anim;
     public GameObject particleThrow;
     public GameObject throwHand;
+    public Vector3 throwVec = Vector3.zero;
     
     [HideInInspector]
     public Transform target;
@@ -87,7 +88,6 @@ public class BaseEnemyController : MonoBehaviour
         {
             if(attacked && !anim.GetBool("IsAttacking"))
             {
-                print(true);
                 attacked = false;
                 return true;
             }
@@ -132,6 +132,7 @@ public class BaseEnemyController : MonoBehaviour
     public void CreateParticleThrow()
     {
         particle = Instantiate(particleThrow, throwHand.transform.position, particleThrow.transform.rotation, throwHand.transform).GetComponent<Spell>();
+        throwVec = Vector3.Normalize(target.position - transform.position);
     }
 
     public void StopAttacking()
@@ -140,7 +141,7 @@ public class BaseEnemyController : MonoBehaviour
         anim.SetBool("IsAttacking", false);
 
         particle.transform.rotation = particle.transform.parent.rotation;
-        particle.rb.AddForce((target.position - particle.transform.position) * particle.speed);
+        particle.rb.AddForce(throwVec * particle.speed);
         particle.transform.parent = null; 
     }
 }

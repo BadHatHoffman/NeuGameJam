@@ -344,6 +344,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9885b89b6d4fbe92f77801ecc3671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1159683778 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5219871803041543265, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+  m_PrefabInstance: {fileID: 6718932320618955617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192222886
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,10 +552,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 2773755909192562718, guid: a7256e859884d824ea855958e139b77d, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 3257664804401210020, guid: a7256e859884d824ea855958e139b77d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -594,6 +595,10 @@ PrefabInstance:
     - target: {fileID: 3257664804401210020, guid: a7256e859884d824ea855958e139b77d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5261385684630070928, guid: a7256e859884d824ea855958e139b77d, type: 3}
+      propertyPath: m_Radius
+      value: 0.53
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7256e859884d824ea855958e139b77d, type: 3}
@@ -652,5 +657,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6718932320618955621, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: RotationSpeed
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718932320618955621, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: CinemachineCameraTarget
+      value: 
+      objectReference: {fileID: 1159683778}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8682361c6146084680f17d6a09d476d, type: 3}
