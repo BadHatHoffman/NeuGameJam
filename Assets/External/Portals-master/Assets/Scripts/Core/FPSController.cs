@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FPSController : PortalTraveller
 {
+    public GameManager gameMan;
+    public GameObject finalBoss;
+    public GameObject bossSpawn;
     public GameObject secondModel;
     public Vector3 camTransformOrig, camTransformNew;
 
@@ -12,6 +15,7 @@ public class FPSController : PortalTraveller
     public float smoothMoveTime = 0.1f;
     public float jumpForce = 8;
     public float gravity = 18;
+    public int totalEntries = 0;
 
     public bool lockCursor;
     public float mouseSensitivity = 10;
@@ -32,6 +36,7 @@ public class FPSController : PortalTraveller
     Vector3 smoothV;
     Vector3 rotationSmoothVelocity;
     Vector3 currentRotation;
+    Ray ray;
 
     bool jumping;
     float lastGroundedTime;
@@ -123,6 +128,25 @@ public class FPSController : PortalTraveller
             JoshChecks();
         }
 
+        //picking up journal entries
+        ray = new Ray(transform.position, transform.forward);
+
+        foreach (var item in Physics.RaycastAll(ray))
+        {
+            if (item.transform.gameObject.CompareTag("JournalEntry") && Input.GetButtonDown("Collect"))
+            {
+                item.transform.gameObject.SetActive(false);
+                totalEntries++;
+                gameMan.CollectingEntry(totalEntries);
+            }
+        }
+
+        //triggering boss fight
+        if (totalEntries >= 5)
+        {
+            Instantiate(finalBoss, bossSpawn.transform);
+            totalEntries = 0;
+        }
     }
 
     private void TigerChecks()
