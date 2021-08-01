@@ -9,6 +9,7 @@ public class BaseEnemyController : MonoBehaviour
     public string state;
     public float checkRadius;
     public float attackRange;
+    public int attackDamage;
     public Animator anim;
     public GameObject particleThrow;
     public GameObject throwHand;
@@ -129,19 +130,22 @@ public class BaseEnemyController : MonoBehaviour
 
     }
 
-    public void CreateParticleThrow()
+    public void AttemptAttack()
     {
-        particle = Instantiate(particleThrow, throwHand.transform.position, particleThrow.transform.rotation, throwHand.transform).GetComponent<Spell>();
-        throwVec = Vector3.Normalize(target.position - transform.position);
+        foreach (var item in Physics.SphereCastAll(throwHand.transform.position, attackRange, transform.forward))
+        {
+            if(item.transform.gameObject.CompareTag("Player"))
+            {
+                if(item.transform.TryGetComponent(out Health h))
+                {
+                    h.TakeDamage(attackDamage);
+                }
+            }
+        }
     }
 
-    public void StopAttacking()
+    public void Death()
     {
-        attacked = true;
-        anim.SetBool("IsAttacking", false);
-
-        particle.transform.rotation = particle.transform.parent.rotation;
-        particle.rb.AddForce(particle.transform.forward * particle.speed);
-        particle.transform.parent = null; 
+        print("I have fucking died");
     }
 }

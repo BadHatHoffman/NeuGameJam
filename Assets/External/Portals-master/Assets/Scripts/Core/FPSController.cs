@@ -47,6 +47,7 @@ public class FPSController : PortalTraveller
     public bool isTiger = false;
     public Animator tigerAnim, camAnim, joshAnim;
     public GameObject transformParticle, castParticle, castHand;
+    public WeaponThrow weaponThrow; //get the script
 
     void Start () {
         cam = Camera.main;
@@ -121,6 +122,8 @@ public class FPSController : PortalTraveller
         transform.eulerAngles = Vector3.up * smoothYaw;
         cam.transform.localEulerAngles = Vector3.right * smoothPitch;
 
+
+
         //Tiger anims
         if (isTiger)
         {
@@ -176,11 +179,25 @@ public class FPSController : PortalTraveller
     private void JoshChecks()
     {
         joshAnim.SetFloat("Speed", controller.velocity.magnitude);
-        if(Input.GetButtonDown("Fire1"))
+        //left mouse click to throw
+        if (Input.GetButtonDown("Fire1"))
         {
-            joshAnim.SetTrigger("Cast");
-            Spell spell = Instantiate(castParticle, castHand.transform.position, Quaternion.identity, castHand.transform).GetComponent<Spell>();
-            GetComponentInChildren<Cast>().spellObj = spell;
+            //trigger the throw method only IF NOT ALREADY THROW (isThrown == false)
+            if (!weaponThrow.isThrown)
+            {
+                weaponThrow.Throw();
+            }
+        }
+
+        //right mouse click to return weapon
+        if (Input.GetButtonDown("Fire2"))
+        {
+            print("FUck you");
+            //trigger the return weapon method only IF WEAPON IS THROWN (isThrow == true)
+            if (weaponThrow.isThrown)
+            {
+                weaponThrow.ReturnWeapon();
+            }
         }
     }
 
