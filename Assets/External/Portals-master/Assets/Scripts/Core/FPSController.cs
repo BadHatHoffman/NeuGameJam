@@ -7,7 +7,7 @@ public class FPSController : PortalTraveller
     public GameManager gameMan;
     public GameObject finalBoss;
     public GameObject bossSpawn;
-    public GameObject[] journalEntries;
+    public float pickupRange = 0;
     public GameObject secondModel;
     public Vector3 camTransformOrig, camTransformNew;
 
@@ -39,7 +39,6 @@ public class FPSController : PortalTraveller
     Vector3 smoothV;
     Vector3 rotationSmoothVelocity;
     Vector3 currentRotation;
-    Ray ray;
 
     bool jumping;
     float lastGroundedTime;
@@ -137,30 +136,18 @@ public class FPSController : PortalTraveller
         //picking up journal entries
         if (Input.GetButtonDown("Collect"))
         {
-            ray = new Ray(transform.position, transform.forward);
-
-            foreach (var item in Physics.RaycastAll(ray))
+            foreach (var item in Physics.SphereCastAll(transform.position, pickupRange, transform.forward))
             {
                 if (item.transform.gameObject.CompareTag("JournalEntry"))
                 {
-                    journalEntries[currentEntry].SetActive(false);
-                    journalEntries[nextEntry].SetActive(true);
-
-                    currentEntry++;
-                    nextEntry++;
+                    Destroy(item.transform.gameObject);
                     totalEntries++;
                     gameMan.CollectingEntry(totalEntries);
 
-                    //enemy sound possibly, need to add timer
-                    //gameManager.EnemyAudio();
+                    //disabled = true will stop inputs for movement
                     break;
                 }
             }
-
-            currentEntry++;
-            nextEntry++;
-            totalEntries++;
-            gameMan.CollectingEntry(totalEntries);
         }
 
         //triggering boss fight
@@ -247,4 +234,8 @@ public class FPSController : PortalTraveller
         print("I am dead");
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, pickupRange);
+    }
 }
