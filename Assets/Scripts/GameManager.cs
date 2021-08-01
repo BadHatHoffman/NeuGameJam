@@ -62,6 +62,51 @@ public class GameManager : MonoBehaviour
             case 13:
                 AudioManager.Instance.Play("ColorlessJosh");
                 break;
+            case 14:
+                AudioManager.Instance.Play("Enemy1");
+                break;
+            case 15:
+                AudioManager.Instance.Play("Enemy2");
+                break;
+            case 16:
+                AudioManager.Instance.Play("Enemy3");
+                break;
+            case 17:
+                AudioManager.Instance.Play("Enemy4");
+                break;
+            case 18:
+                AudioManager.Instance.Play("Enemy5");
+                break;
+            case 19:
+                AudioManager.Instance.Play("Enemy6");
+                break;
+            case 20:
+                AudioManager.Instance.Play("Enemy7");
+                break;
+            case 21:
+                AudioManager.Instance.Play("Enemy8");
+                break;
+            case 22:
+                AudioManager.Instance.Play("Enemy9");
+                break;
+            case 23:
+                AudioManager.Instance.Play("EnemyHigh1");
+                break;
+            case 24:
+                AudioManager.Instance.Play("EnemyHigh2");
+                break;
+            case 25:
+                AudioManager.Instance.Play("EnemyHigh3");
+                break;
+            case 26:
+                AudioManager.Instance.Play("EnemyLong1");
+                break;
+            case 27:
+                AudioManager.Instance.Play("EnemyLong2");
+                break;
+            case 28:
+                AudioManager.Instance.Play("EnemyLong3");
+                break;
             default:
                 break;
         }
