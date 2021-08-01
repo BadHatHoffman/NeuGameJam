@@ -3112,6 +3112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creditsPanel: {fileID: 80338639}
   mainMenuPanel: {fileID: 1606082936}
+  gameMan: {fileID: 0}
 --- !u!1 &2061729811
 GameObject:
   m_ObjectHideFlags: 0

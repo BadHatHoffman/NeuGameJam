@@ -7,12 +7,13 @@ public class UIManagement : MonoBehaviour
 {
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
+    public GameManager gameMan;
 
     public void Start()
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-        AudioManager.Instance.Play("MenuSong");
+        gameMan.CueAudio(0);
 
     }
 
