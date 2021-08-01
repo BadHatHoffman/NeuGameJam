@@ -5,9 +5,8 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-    public GameManager gameMan;
+    public GameManager gameManager;
     public FPSController fpsController;
-    public int totalEntries = 0;
     public int damage;
     public Health health;
     public Vector3 toVec;
@@ -27,14 +26,9 @@ public class MainController : MonoBehaviour
                 toVec = Vector3.Normalize(item.transform.position - transform.position);
                 item.transform.GetComponent<Outline>().enabled = true;
 
+                //enemy sound possibly, need to add timer
+                //gameManager.EnemyAudio();
                 break;
-            }
-
-            if(item.transform.gameObject.CompareTag("JournalEntry") && Input.GetButtonDown("Collect"))
-            {
-                item.transform.gameObject.SetActive(false);
-                totalEntries++;
-                gameMan.CollectingEntry(totalEntries);
             }
         }
     }
