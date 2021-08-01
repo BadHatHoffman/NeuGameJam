@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MainController : MonoBehaviour
 {
-
+    public GameManager gameManager;
     public FPSController fpsController;
     public int damage;
     public Health health;
@@ -26,6 +26,8 @@ public class MainController : MonoBehaviour
                 toVec = Vector3.Normalize(item.transform.position - transform.position);
                 item.transform.GetComponent<Outline>().enabled = true;
 
+                //enemy sound possibly, need to add timer
+                //gameManager.EnemyAudio();
                 break;
             }
         }

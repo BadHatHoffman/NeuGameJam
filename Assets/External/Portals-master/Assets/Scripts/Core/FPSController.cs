@@ -7,6 +7,7 @@ public class FPSController : PortalTraveller
     public GameManager gameMan;
     public GameObject finalBoss;
     public GameObject bossSpawn;
+    public GameObject[] journalEntries;
     public GameObject secondModel;
     public Vector3 camTransformOrig, camTransformNew;
 
@@ -16,6 +17,8 @@ public class FPSController : PortalTraveller
     public float jumpForce = 8;
     public float gravity = 18;
     public int totalEntries = 0;
+    public int currentEntry = 0;
+    public int nextEntry = 1;
 
     public bool lockCursor;
     public float mouseSensitivity = 10;
@@ -129,16 +132,32 @@ public class FPSController : PortalTraveller
         }
 
         //picking up journal entries
-        ray = new Ray(transform.position, transform.forward);
-
-        foreach (var item in Physics.RaycastAll(ray))
+        if (Input.GetButtonDown("Collect"))
         {
-            if (item.transform.gameObject.CompareTag("JournalEntry") && Input.GetButtonDown("Collect"))
+            ray = new Ray(transform.position, transform.forward);
+
+            foreach (var item in Physics.RaycastAll(ray))
             {
-                item.transform.gameObject.SetActive(false);
-                totalEntries++;
-                gameMan.CollectingEntry(totalEntries);
+                if (item.transform.gameObject.CompareTag("JournalEntry"))
+                {
+                    journalEntries[currentEntry].SetActive(false);
+                    journalEntries[nextEntry].SetActive(true);
+
+                    currentEntry++;
+                    nextEntry++;
+                    totalEntries++;
+                    gameMan.CollectingEntry(totalEntries);
+
+                    //enemy sound possibly, need to add timer
+                    //gameManager.EnemyAudio();
+                    break;
+                }
             }
+
+            currentEntry++;
+            nextEntry++;
+            totalEntries++;
+            gameMan.CollectingEntry(totalEntries);
         }
 
         //triggering boss fight

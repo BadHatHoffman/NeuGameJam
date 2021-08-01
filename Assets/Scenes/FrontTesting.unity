@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalEntry Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+      propertyPath: m_TagString
+      value: JournalEntry
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
 --- !u!1 &305411525
@@ -578,6 +582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalEntry Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+      propertyPath: m_TagString
+      value: JournalEntry
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
 --- !u!1001 &1744227737
@@ -634,6 +642,10 @@ PrefabInstance:
     - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
       propertyPath: m_Name
       value: JournalEntry Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+      propertyPath: m_TagString
+      value: JournalEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
@@ -692,6 +704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalEntry Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+      propertyPath: m_TagString
+      value: JournalEntry
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
 --- !u!1001 &2013294249
@@ -748,6 +764,10 @@ PrefabInstance:
     - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
       propertyPath: m_Name
       value: JournalEntry Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+      propertyPath: m_TagString
+      value: JournalEntry
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
