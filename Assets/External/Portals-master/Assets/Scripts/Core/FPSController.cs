@@ -8,8 +8,7 @@ public class FPSController : PortalTraveller
     public GameObject finalBoss;
     public GameObject bossSpawn;
     public float pickupRange = 0;
-    public GameObject secondModel;
-    public Vector3 camTransformOrig, camTransformNew;
+    public Vector3 camTransformOrig;
 
     public float walkSpeed = 3;
     public float runSpeed = 6;
@@ -43,8 +42,7 @@ public class FPSController : PortalTraveller
     bool jumping;
     float lastGroundedTime;
     public bool disabled;
-    public bool isTiger = false;
-    public Animator tigerAnim, camAnim, joshAnim;
+    public Animator camAnim, joshAnim;
     public GameObject transformParticle, castParticle, castHand;
     public WeaponThrow weaponThrow; //get the script
 
@@ -65,9 +63,11 @@ public class FPSController : PortalTraveller
         GetComponent<Health>().Death.AddListener(Die);
     }
 
-    void Update () {
+    void Update()
+    {
 
-        if (disabled) {
+        if (disabled)
+        {
             return;
         }
 
@@ -123,15 +123,7 @@ public class FPSController : PortalTraveller
 
 
 
-        //Tiger anims
-        if (isTiger)
-        {
-            TigerChecks();
-        }
-        else //Josh Anims
-        {
-            JoshChecks();
-        }
+        JoshChecks();
 
         //picking up journal entries
         if (Input.GetButtonDown("Collect"))
@@ -156,11 +148,6 @@ public class FPSController : PortalTraveller
             Instantiate(finalBoss, bossSpawn.transform);
             totalEntries = 0;
         }
-    }
-
-    private void TigerChecks()
-    {
-        tigerAnim.SetFloat("Speed", controller.velocity.magnitude);
     }
 
     private void JoshChecks()
@@ -195,36 +182,7 @@ public class FPSController : PortalTraveller
         smoothYaw += delta;
         transform.eulerAngles = Vector3.up * smoothYaw;
         velocity = toPortal.TransformVector (fromPortal.InverseTransformVector (velocity));
-        Physics.SyncTransforms ();
-
-        ChangeMode();
-    }
-
-    public void ChangeMode()
-    {
-        bool bw = !GetComponentInChildren<MainCamera>().isBWMode;
-
-        GetComponentInChildren<MainCamera>().isBWMode = bw;
-
-        Destroy(Instantiate(transformParticle, transform.position, transformParticle.transform.rotation), 5);
-        if(bw)
-        {
-            secondModel.SetActive(true);
-            graphicsObject.SetActive(false);
-            cam.GetComponent<MainCamera>().camPos = camTransformNew;
-            GetComponent<MainController>().SwapToTiger();
-        }
-        else
-        {
-            secondModel.SetActive(false);
-            graphicsObject.SetActive(true);
-            cam.GetComponent<MainCamera>().camPos = camTransformOrig;
-            GetComponent<MainController>().SwapToHuman();
-        }
-
-        disabled = true;
-        camAnim.enabled = true;
-        camAnim.SetTrigger("Transform");
+        Physics.SyncTransforms();
     }
 
     public void Die()
