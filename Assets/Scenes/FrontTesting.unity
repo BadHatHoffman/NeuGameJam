@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &5378946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+  m_PrefabInstance: {fileID: 1629094396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &44440247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,6 +189,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+--- !u!1 &58838125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+  m_PrefabInstance: {fileID: 1853319912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &149931771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+  m_PrefabInstance: {fileID: 1744227737}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &305411525
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +461,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1140451064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+  m_PrefabInstance: {fileID: 44440247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1160827770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +497,34 @@ PrefabInstance:
       propertyPath: finalBoss
       value: 
       objectReference: {fileID: 100000, guid: 8be2de3a24cb4d64ba4fb1bbdd89c6e8, type: 3}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: pickupRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.data[0]
+      value: 
+      objectReference: {fileID: 58838125}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.data[1]
+      value: 
+      objectReference: {fileID: 149931771}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.data[2]
+      value: 
+      objectReference: {fileID: 5378946}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.data[3]
+      value: 
+      objectReference: {fileID: 1140451064}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: journalEntries.Array.data[4]
+      value: 
+      objectReference: {fileID: 2053530628}
     - target: {fileID: 5219871802540974029, guid: c8682361c6146084680f17d6a09d476d, type: 3}
       propertyPath: m_Name
       value: Josh Variant
@@ -527,6 +575,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+--- !u!1 &1365218327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1365218329}
+  - component: {fileID: 1365218328}
+  m_Layer: 0
+  m_Name: fk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1365218328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365218327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c501ef3f5d5956747a2c42698a5cd2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: ConfusedJosh
+    clip: {fileID: 8300000, guid: 75190d5a28ddc3942a095305ba0b85a1, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+--- !u!4 &1365218329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365218327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.473991, y: 0.42379826, z: -1.108675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1629094396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -704,10 +802,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: JournalEntry Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
-      propertyPath: m_TagString
-      value: JournalEntry
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
 --- !u!1001 &2013294249
@@ -771,3 +865,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+--- !u!1 &2053530628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+  m_PrefabInstance: {fileID: 2013294249}
+  m_PrefabAsset: {fileID: 0}
