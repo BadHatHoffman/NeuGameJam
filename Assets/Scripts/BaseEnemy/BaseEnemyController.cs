@@ -12,10 +12,14 @@ public class BaseEnemyController : MonoBehaviour
     public Animator anim;
     public GameObject particleThrow;
     public GameObject throwHand;
+    
+    [HideInInspector]
+    public Transform target;
 
     Vector3 destination;
-    Transform target;
     NavMeshAgent agent;
+    Spell particle;
+    bool attacked = false;
 
     StateMachine _stateMachine;
 
@@ -31,6 +35,7 @@ public class BaseEnemyController : MonoBehaviour
         //Specific Transitions
         At(wanderState, followPlayerState, FoundTarget(), false);
         At(followPlayerState, attackPlayerState, WithinAttackRange(), false);
+        At(attackPlayerState, followPlayerState, AttackedPlayer(), false);
 
         //Any transitions
         _stateMachine.AddAnyTransition(wanderState, NoTarget(), false);
@@ -57,7 +62,17 @@ public class BaseEnemyController : MonoBehaviour
 
         Func<bool> NoTarget() => () =>
         {
-            return target == null;
+            foreach (var item in Physics.SphereCastAll(transform.position, checkRadius, Vector3.forward))
+            {
+                if (item.transform.gameObject.CompareTag("Player"))
+                {
+                    target = item.transform;
+                    return false;
+                }
+            }
+
+            target = null;
+            return true;
         };
 
         Func<bool> WithinAttackRange() => () =>
@@ -66,6 +81,18 @@ public class BaseEnemyController : MonoBehaviour
                 return false;
 
             return Vector3.Distance(transform.position, target.position) <= attackRange;
+        };
+
+        Func<bool> AttackedPlayer() => () =>
+        {
+            if(attacked && !anim.GetBool("IsAttacking"))
+            {
+                print(true);
+                attacked = false;
+                return true;
+            }
+
+            return false;
         };
     }
 
@@ -104,11 +131,16 @@ public class BaseEnemyController : MonoBehaviour
 
     public void CreateParticleThrow()
     {
-        Instantiate(particleThrow, throwHand.transform.position, particleThrow.transform.rotation, throwHand.transform);
+        particle = Instantiate(particleThrow, throwHand.transform.position, particleThrow.transform.rotation, throwHand.transform).GetComponent<Spell>();
     }
 
     public void StopAttacking()
     {
+        attacked = true;
         anim.SetBool("IsAttacking", false);
+
+        particle.transform.rotation = particle.transform.parent.rotation;
+        particle.rb.AddForce((target.position - particle.transform.position) * particle.speed);
+        particle.transform.parent = null; 
     }
 }

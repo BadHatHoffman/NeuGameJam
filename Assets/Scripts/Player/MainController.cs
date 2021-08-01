@@ -5,6 +5,8 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     public FPSController fpsController;
+    public int damage;
+    public Health health;
 
     public void SwapToHuman()
     {

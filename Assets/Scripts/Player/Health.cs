@@ -20,4 +20,10 @@ public class Health : MonoBehaviour
         if (currentHealth == 0)
             Death.Invoke();
     }
+
+    public void AddMaxHealth(int amt)
+    {
+        maxHealth += amt;
+        currentHealth = maxHealth;
+    }
 }
