@@ -461,6 +461,18 @@ PrefabInstance:
       propertyPath: finalBoss
       value: 
       objectReference: {fileID: 8715913275481979155, guid: 3a723fdb812f2f541ae3f763001488d5, type: 3}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: gameMan
+      value: 
+      objectReference: {fileID: 1038435569}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: bossSpawn
+      value: 
+      objectReference: {fileID: 305411525}
+    - target: {fileID: 935345535346479809, guid: c8682361c6146084680f17d6a09d476d, type: 3}
+      propertyPath: finalBoss
+      value: 
+      objectReference: {fileID: 100000, guid: 8be2de3a24cb4d64ba4fb1bbdd89c6e8, type: 3}
     - target: {fileID: 5219871802540974029, guid: c8682361c6146084680f17d6a09d476d, type: 3}
       propertyPath: m_Name
       value: Josh Variant
