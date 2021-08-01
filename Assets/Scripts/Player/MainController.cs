@@ -6,6 +6,7 @@ using UnityEngine;
 public class MainController : MonoBehaviour
 {
     public FPSController fpsController;
+    public int totalEntries = 0;
     public int damage;
     public Health health;
     public Vector3 toVec;
