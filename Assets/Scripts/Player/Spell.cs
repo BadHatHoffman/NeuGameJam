@@ -12,7 +12,7 @@ public class Spell : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        Destroy(gameObject, 25);
+        Destroy(gameObject, 25); 
     }
 
     private void OnCollisionEnter(Collision collision)
