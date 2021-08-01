@@ -149,7 +149,6 @@ public class FPSController : PortalTraveller
         //right mouse click to return weapon
         if (Input.GetButtonDown("Fire2"))
         {
-            print("FUck you");
             //trigger the return weapon method only IF WEAPON IS THROWN (isThrow == true)
             if (weaponThrow.isThrown)
             {
