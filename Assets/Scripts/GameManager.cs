@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public TextMeshPro totalEntriesTxt;
+
     public void CollectingEntry(int totalEntries)
     {
         //play collection noise
 
         //play ConfusedJosh
         CueAudio(8);
+        totalEntriesTxt.text = $"Entries Collected: {totalEntries} / 5"; 
     }
 
     public void EnemyAudio()
