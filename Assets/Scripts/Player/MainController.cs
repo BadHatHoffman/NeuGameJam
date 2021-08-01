@@ -32,19 +32,4 @@ public class MainController : MonoBehaviour
             }
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawRay(ray);
-    }
-
-    public void SwapToHuman()
-    {
-        fpsController.isTiger = false;
-    }
-
-    public void SwapToTiger()
-    {
-        fpsController.isTiger = true;
-    }
 }

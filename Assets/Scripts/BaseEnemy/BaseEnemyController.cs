@@ -138,6 +138,7 @@ public class BaseEnemyController : MonoBehaviour
             {
                 if(item.transform.TryGetComponent(out Health h))
                 {
+                    GameManager.Instance.EnemyAudio();
                     h.TakeDamage(attackDamage);
                 }
             }
