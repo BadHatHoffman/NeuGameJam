@@ -10,7 +10,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.35
+  m_Radius: 0.53
   m_Height: 1.9204993
   m_Direction: 1
   m_Center: {x: 0, y: 0.81898427, z: 0}
@@ -30,7 +30,19 @@ MonoBehaviour:
   maxHealth: 5
   Death:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4557519538300753308}
+        m_TargetAssemblyTypeName: BaseEnemyController, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!195 &3080239614373556076
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -89,6 +101,7 @@ MonoBehaviour:
   anim: {fileID: 8923214389199091934}
   particleThrow: {fileID: 2315430422141834879, guid: bffd1e50941589347b923895d8cde350, type: 3}
   throwHand: {fileID: 4229748582971661444}
+  throwVec: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
 --- !u!1001 &3080239615502517583
 PrefabInstance:
@@ -143,7 +156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_Name
-      value: BaseEnemy Variant
+      value: BaseEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_TagString

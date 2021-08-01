@@ -144,4 +144,9 @@ public class BaseEnemyController : MonoBehaviour
         particle.rb.AddForce(particle.transform.forward * particle.speed);
         particle.transform.parent = null; 
     }
+
+    public void Death()
+    {
+        print("I have fucking died");
+    }
 }
