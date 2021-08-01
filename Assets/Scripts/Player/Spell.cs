@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spell : MonoBehaviour
 {
+    public string canHitTag;
     public int damage;
     public float speed = 5;
 
@@ -17,7 +18,7 @@ public class Spell : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(collision.gameObject.CompareTag(canHitTag))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
         }
