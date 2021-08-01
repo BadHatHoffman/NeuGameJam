@@ -56,7 +56,8 @@ MonoBehaviour:
   attackRange: 5
   anim: {fileID: 8923214389199091934}
   particleThrow: {fileID: 2315430422141834879, guid: bffd1e50941589347b923895d8cde350, type: 3}
-  throwHand: {fileID: 885660963327370446}
+  throwHand: {fileID: 4229748582971661444}
+  target: {fileID: 0}
 --- !u!1001 &3080239615502517583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,7 +71,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.5201597
+      value: -1.405
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_LocalPosition.y
@@ -78,7 +79,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.2016535
+      value: -5.24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_LocalRotation.w
@@ -112,10 +113,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5472622940992281205, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ed0f5daa7adaa5e4c95c6dd062c37391, type: 2}
+    - target: {fileID: 8155812263928727500, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
 --- !u!1 &2773755909192562718 stripped
@@ -128,8 +137,8 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
   m_PrefabInstance: {fileID: 3080239615502517583}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &885660963327370446 stripped
+--- !u!1 &4229748582971661444 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2807231755144388993, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1156334875509381579, guid: a25f29cbe8465834f829a953ba8b5455, type: 3}
   m_PrefabInstance: {fileID: 3080239615502517583}
   m_PrefabAsset: {fileID: 0}

@@ -8,8 +8,8 @@ public class Cast : MonoBehaviour
 
     public void CastSpell()
     {
-        print("Heloooooooooooo");
-        spellObj.rb.AddForce(Vector3.forward * spellObj.speed);
+        spellObj.transform.rotation = spellObj.transform.parent.rotation;
+        spellObj.rb.AddForce(transform.right * spellObj.speed);
         spellObj.transform.parent = null;
     }
 }
