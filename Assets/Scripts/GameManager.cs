@@ -4,16 +4,20 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject[] sounds;
+    
 
-    void Start()
+    public void CollectingEntry(int totalEntries)
     {
-        
+        //play collection noise
+
+        //play ConfusedJosh
+        CueAudio(8);
     }
 
-    void Update()
+    public void EnemyAudio()
     {
-        
+        int soundIndex = Random.Range(14, 28);
+        CueAudio(soundIndex);
     }
 
     public void CueAudio(int soundIndex)
