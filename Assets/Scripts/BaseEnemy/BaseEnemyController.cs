@@ -146,6 +146,7 @@ public class BaseEnemyController : MonoBehaviour
 
     public void Death()
     {
-        print("I have fucking died");
+        //TODO: Do more here
+        Destroy(gameObject);
     }
 }
