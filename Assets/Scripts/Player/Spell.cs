@@ -20,7 +20,9 @@ public class Spell : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(canHitTag))
         {
+            print(collision.gameObject);
             collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+            Destroy(gameObject);
         }
     }
 }

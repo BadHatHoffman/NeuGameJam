@@ -58,6 +58,20 @@ MonoBehaviour:
   particleThrow: {fileID: 2315430422141834879, guid: bffd1e50941589347b923895d8cde350, type: 3}
   throwHand: {fileID: 4229748582971661444}
   target: {fileID: 0}
+--- !u!136 &5261385684630070928
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2773755909192562718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.35
+  m_Height: 1.9204993
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.81898427, z: 0}
 --- !u!1001 &3080239615502517583
 PrefabInstance:
   m_ObjectHideFlags: 0
