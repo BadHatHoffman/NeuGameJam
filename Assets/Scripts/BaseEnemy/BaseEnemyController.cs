@@ -141,7 +141,7 @@ public class BaseEnemyController : MonoBehaviour
         anim.SetBool("IsAttacking", false);
 
         particle.transform.rotation = particle.transform.parent.rotation;
-        particle.rb.AddForce(throwVec * particle.speed);
+        particle.rb.AddForce(particle.transform.forward * particle.speed);
         particle.transform.parent = null; 
     }
 }
