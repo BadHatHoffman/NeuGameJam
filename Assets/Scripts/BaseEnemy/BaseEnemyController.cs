@@ -105,6 +105,9 @@ public class BaseEnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.Instance.isPaused)
+            return;
+
         _stateMachine.Tick();
         state = _stateMachine._currentState.ToString();
 
