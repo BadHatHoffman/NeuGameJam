@@ -1716,7 +1716,7 @@ GameObject:
   - component: {fileID: 912031866}
   - component: {fileID: 912031865}
   m_Layer: 5
-  m_Name: Portals
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1761,7 +1761,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Portal system courtesy of Sebastian Lague
+  m_text: Enemy sounds courtesy of Matthew M.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
   m_sharedMaterial: {fileID: -4124455561799026868, guid: c9ab8321c6a2c8d47b49d024114042aa, type: 2}
