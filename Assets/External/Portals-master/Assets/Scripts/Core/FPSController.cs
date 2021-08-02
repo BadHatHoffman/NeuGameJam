@@ -98,6 +98,7 @@ public class FPSController : PortalTraveller
             float timeSinceLastTouchedGround = Time.time - lastGroundedTime;
             if (controller.isGrounded || (!jumping && timeSinceLastTouchedGround < 0.15f))
             {
+                GameManager.Instance.CueAudio(7);
                 jumping = true;
                 verticalVelocity = jumpForce;
             }

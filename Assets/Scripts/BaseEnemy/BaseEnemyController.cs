@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class BaseEnemyController : MonoBehaviour
 {
@@ -147,6 +148,12 @@ public class BaseEnemyController : MonoBehaviour
             }
         }
     }
+
+    public void BossDeath()
+    {
+        SceneManager.LoadScene(2);
+    }
+
 
     public void Death()
     {

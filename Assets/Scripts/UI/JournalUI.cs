@@ -72,5 +72,7 @@ public class JournalUI : MonoBehaviour
         Cursor.visible = false;
         journalPanel.SetActive(false);
         GameObject.FindGameObjectWithTag("Player").GetComponent<FPSController>().disabled = false;
+
+
     }
 }
