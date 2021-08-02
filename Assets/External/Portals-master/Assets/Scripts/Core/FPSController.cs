@@ -43,7 +43,12 @@ public class FPSController : PortalTraveller
     public GameObject transformParticle, castParticle, castHand;
     public WeaponThrow weaponThrow; //get the script
 
+    Vector3 spawnPos;
+
+
     void Start () {
+        spawnPos = transform.position;
+
         cam = Camera.main;
         if (lockCursor) {
             Cursor.lockState = CursorLockMode.Locked;
@@ -142,7 +147,7 @@ public class FPSController : PortalTraveller
         //triggering boss fight
         if (totalEntries >= 5)
         {
-            Instantiate(finalBoss, bossSpawn.transform);
+            bossSpawn.SetActive(true);
             totalEntries = 0;
         }
     }
@@ -185,8 +190,7 @@ public class FPSController : PortalTraveller
 
     public void Die()
     {
-        //TODO: Do something here
-        print("I am dead");
+        Application.Quit();
     }
 
     private void OnDrawGizmos()
