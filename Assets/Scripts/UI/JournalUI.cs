@@ -57,6 +57,7 @@ public class JournalUI : MonoBehaviour
 
     public void OpenEntry(int totalEntries)
     {
+        GameManager.Instance.isPaused = true;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         journalPanel.SetActive(true);
@@ -66,6 +67,7 @@ public class JournalUI : MonoBehaviour
 
     public void CloseEntry()
     {
+        GameManager.Instance.isPaused = false;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         journalPanel.SetActive(false);

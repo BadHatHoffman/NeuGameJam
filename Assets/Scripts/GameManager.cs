@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
+    public bool isPaused = false;
+
     public void EnemyAudio()
     {
         int soundIndex = Random.Range(14, 28);
