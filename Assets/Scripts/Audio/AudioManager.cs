@@ -45,7 +45,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
+        Play("Theme");
     }
 
     // Update is called once per frame
