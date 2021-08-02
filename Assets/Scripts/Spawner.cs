@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject spawnObj;
     public float spawnTime = 15f;
+    public int limit = 5;
 
     void Start()
     {
@@ -16,7 +17,11 @@ public class Spawner : MonoBehaviour
     {
         if (spawnTime <= 0f)
         {
-            Instantiate(spawnObj, transform.position, Quaternion.identity);
+            if(limit > 0)
+            {
+                Instantiate(spawnObj, transform.position, Quaternion.identity);
+                limit--;
+            }
             spawnTime = 15f;
         }
         else spawnTime -= Time.deltaTime;
