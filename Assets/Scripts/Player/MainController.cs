@@ -15,7 +15,7 @@ public class MainController : MonoBehaviour
 
     private void Update()
     {
-        GameObject.FindGameObjectsWithTag("Enemy").All(x => x.GetComponent<Outline>().enabled = false);
+        //GameObject.FindGameObjectsWithTag("Enemy").All(x => x.GetComponent<Outline>().enabled = false);
 
         ray = new Ray(transform.position, transform.forward);
 
@@ -24,7 +24,7 @@ public class MainController : MonoBehaviour
             if (item.transform.gameObject.CompareTag("Enemy"))
             {
                 toVec = Vector3.Normalize(item.transform.position - transform.position);
-                item.transform.GetComponent<Outline>().enabled = true;
+                //item.transform.GetComponent<Outline>().enabled = true;
 
                 //enemy sound possibly, need to add timer
                 //gameManager.EnemyAudio();
