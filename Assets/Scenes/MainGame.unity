@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.48260742, g: 0.52269995, b: 0.5576685, a: 1}
+  m_IndirectSpecularColor: {r: 0.48270625, g: 0.52270544, b: 0.5574704, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (11)
@@ -1090,6 +1094,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (12)
@@ -2524,6 +2532,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn
@@ -3482,6 +3494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObj: {fileID: 3249408923211347188, guid: 8e264b059cbffe24680240b4beddc923, type: 3}
+  spawnTime: 15
 --- !u!1001 &547239729
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3563,6 +3576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (8)
@@ -3716,6 +3733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (13)
@@ -3773,6 +3794,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (10)
@@ -4622,6 +4647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (7)
@@ -4886,6 +4915,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (2)
@@ -5468,6 +5501,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (5)
@@ -7192,6 +7229,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (9)
@@ -8919,6 +8960,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (1)
@@ -9050,6 +9095,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (4)
@@ -9520,6 +9569,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (6)
@@ -10013,6 +10066,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9049009020955978488, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
+      propertyPath: spawnTime
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 9049009020955978489, guid: dc65cb9c30c46eb42a64553baedf609b, type: 3}
       propertyPath: m_Name
       value: EnemySpawn (3)
