@@ -399,6 +399,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5865786540893787559}
     - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: mouseSensitivity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: camTransformOrig.y
       value: 1.143
       objectReference: {fileID: 0}
