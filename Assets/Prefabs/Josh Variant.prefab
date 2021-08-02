@@ -200,7 +200,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: f42de57e79f3e8943a8cc85b5e83be4e, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: f42de57e79f3e8943a8cc85b5e83be4e, type: 3}
       propertyPath: m_LocalScale.x
@@ -250,6 +250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -2416733968201007103, guid: f42de57e79f3e8943a8cc85b5e83be4e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: adbe45d1f2f58174ebc1210ec4f785e2, type: 2}
     - target: {fileID: -927199367670048503, guid: f42de57e79f3e8943a8cc85b5e83be4e, type: 3}
       propertyPath: m_Name
       value: Weapon

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FPSController : PortalTraveller
 {
-    public GameManager gameMan;
     public GameObject finalBoss;
     public GameObject bossSpawn;
     public float pickupRange = 0;
@@ -134,8 +133,8 @@ public class FPSController : PortalTraveller
                 {
                     Destroy(item.transform.gameObject);
                     totalEntries++;
-                    gameMan.CollectingEntry(totalEntries);
-
+                    GameManager.Instance.CollectingEntry(totalEntries);
+                    GetComponentInChildren<MainCamera>().isBWMode = true;
                     //disabled = true will stop inputs for movement
                     break;
                 }
@@ -159,6 +158,7 @@ public class FPSController : PortalTraveller
             //trigger the throw method only IF NOT ALREADY THROW (isThrown == false)
             if (!weaponThrow.isThrown)
             {
+                GameManager.Instance.CueAudio(6);
                 weaponThrow.Throw();
             }
         }
