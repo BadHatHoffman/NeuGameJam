@@ -145,10 +145,6 @@ public class BaseEnemyController : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        //Gizmos.DrawSphere(transform.position, attackRange);
-    }
     public void Death()
     {
         //TODO: Do more here
