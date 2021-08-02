@@ -156,7 +156,7 @@ public class FPSController : PortalTraveller
             //trigger the throw method only IF NOT ALREADY THROW (isThrown == false)
             if (!weaponThrow.isThrown)
             {
-                //GameManager.Instance.CueAudio(6);
+                GameManager.Instance.CueAudio(6);
                 weaponThrow.Throw();
             }
         }
