@@ -6,9 +6,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
     public TextMeshPro totalEntriesTxt;
-=======
     #region Singleton
     private static GameManager _instance;
 
@@ -25,7 +23,6 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
->>>>>>> 3bd0d810f6ee8f97317f6ee7d449bd1fa67d6fb5
 
     public void CollectingEntry(int totalEntries)
     {
