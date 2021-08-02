@@ -23,7 +23,28 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    public TextMeshPro totalEntriesTxt;
+    public GameObject journalPanel;
+    public TMP_Text journalEntryTxt;
+    public TMP_Text totalEntriesTxt;
+
+    string[] journalEntries =
+    {
+        " I have no clue where I am or what happened to me. " +
+            "I was back home and then just... appeared here. " +
+            "I don't know what happened. " +
+            "I just want my family back. " +
+            "I need to get rid of this curse.",
+        " I think that defeating the mannequins will help me find out how to stop this stupid curse.",
+        "I've killed several mannequins and nothing is changing. " +
+            "I think that I need to figure something else out, " +
+            "though I'm not sure what that something else would be.",
+        "I think my best bet is just giving up. " +
+            "There is nothing for me here but stupid mannequins and these blank journals. " +
+            "That old house is empty and the truck hasn't been touched in ages.",
+        "I don't think I'll ever leave this stupid place or fix my vision. " +
+            "If anyone ever finds this, best of luck, " +
+            "hopefully you can find a way out of this hell."
+    };
 
     public void CollectingEntry(int totalEntries)
     {
@@ -31,14 +52,20 @@ public class GameManager : MonoBehaviour
 
         //play ConfusedJosh
         CueAudio(8);
-        totalEntriesTxt.text = $"Entries Collected: {totalEntries} / 5";
+        totalEntriesTxt.text = $"Entries Collected: {totalEntries + 1} / 5";
         OpenEntry(totalEntries);
     }
 
     public void OpenEntry(int totalEntries)
     {
-
+        journalPanel.SetActive(true);
+        journalEntryTxt.text = journalEntries[totalEntries];
         CueAudio(29 + totalEntries);
+    }
+
+    public void CloseEntry()
+    {
+        journalPanel.SetActive(false);
     }
 
     public void EnemyAudio()
@@ -52,7 +79,7 @@ public class GameManager : MonoBehaviour
         switch (soundIndex)
         {
             case 0:
-                AudioManager.Instance.Play("MenuSong");
+                AudioManager.Instance.Play("MainSong");
                 break;
             case 1:
                 AudioManager.Instance.Play("WASDJosh");
@@ -137,6 +164,21 @@ public class GameManager : MonoBehaviour
                 break;
             case 28:
                 AudioManager.Instance.Play("EnemyLong3");
+                break;
+            case 29:
+                AudioManager.Instance.Play("Journal1");
+                break;
+            case 30:
+                AudioManager.Instance.Play("Journal2");
+                break;
+            case 31:
+                AudioManager.Instance.Play("Journal3");
+                break;
+            case 32:
+                AudioManager.Instance.Play("Journal4");
+                break;
+            case 33:
+                AudioManager.Instance.Play("Journal5");
                 break;
             default:
                 break;
