@@ -284,7 +284,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1535381019623673784, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: m_Name
-      value: Josh
+      value: Josh Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1535381019623673786, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: m_RootOrder
@@ -386,6 +386,14 @@ PrefabInstance:
       propertyPath: health
       value: 
       objectReference: {fileID: 6718932320400961459}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: runSpeed
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
+      propertyPath: walkSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5892241682875843252, guid: 5101aee443b6c4e028aae23d799c5fa4, type: 3}
       propertyPath: weaponThrow
       value: 
