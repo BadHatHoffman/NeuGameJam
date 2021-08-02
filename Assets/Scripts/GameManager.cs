@@ -6,7 +6,10 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     public TextMeshPro totalEntriesTxt;
+=======
+>>>>>>> 67b2a03f216ce2d7ffa73454036d430a51277b08
     #region Singleton
     private static GameManager _instance;
 
@@ -23,6 +26,11 @@ public class GameManager : MonoBehaviour
         }
     }
     #endregion
+<<<<<<< HEAD
+=======
+
+    public TextMeshPro totalEntriesTxt;
+>>>>>>> 67b2a03f216ce2d7ffa73454036d430a51277b08
 
     public void CollectingEntry(int totalEntries)
     {
@@ -30,7 +38,14 @@ public class GameManager : MonoBehaviour
 
         //play ConfusedJosh
         CueAudio(8);
-        totalEntriesTxt.text = $"Entries Collected: {totalEntries} / 5"; 
+        totalEntriesTxt.text = $"Entries Collected: {totalEntries} / 5";
+        OpenEntry(totalEntries);
+    }
+
+    public void OpenEntry(int totalEntries)
+    {
+
+        CueAudio(29 + totalEntries);
     }
 
     public void EnemyAudio()
