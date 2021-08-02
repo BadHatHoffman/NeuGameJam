@@ -7,14 +7,12 @@ public class UIManagement : MonoBehaviour
 {
     public GameObject creditsPanel;
     public GameObject mainMenuPanel;
-    public GameManager gameMan;
 
     public void Start()
     {
         creditsPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
-        gameMan.CueAudio(0);
-
+        GameManager.Instance.CueAudio(0);
     }
 
     //scene management

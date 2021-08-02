@@ -15,8 +15,6 @@ public class FPSController : PortalTraveller
     public float jumpForce = 8;
     public float gravity = 18;
     public int totalEntries = 0;
-    public int currentEntry = 0;
-    public int nextEntry = 1;
 
     public bool lockCursor;
     public float mouseSensitivity = 10;
@@ -132,10 +130,11 @@ public class FPSController : PortalTraveller
                 if (item.transform.gameObject.CompareTag("JournalEntry"))
                 {
                     Destroy(item.transform.gameObject);
-                    totalEntries++;
+                    disabled = true;
                     GameManager.Instance.CollectingEntry(totalEntries);
                     GetComponentInChildren<MainCamera>().isBWMode = true;
-                    //disabled = true will stop inputs for movement
+                    totalEntries++;
+                    disabled = true;
                     break;
                 }
             }
