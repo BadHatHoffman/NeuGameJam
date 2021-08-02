@@ -131,10 +131,9 @@ public class FPSController : PortalTraveller
                 {
                     Destroy(item.transform.gameObject);
                     disabled = true;
-                    GameManager.Instance.CollectingEntry(totalEntries);
+                    JournalUI.Instance.CollectingEntry(totalEntries);
                     GetComponentInChildren<MainCamera>().isBWMode = true;
                     totalEntries++;
-                    disabled = true;
                     break;
                 }
             }
